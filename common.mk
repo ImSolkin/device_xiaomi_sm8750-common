@@ -27,7 +27,7 @@ $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
 # SHIPPING API
 BOARD_SHIPPING_API_LEVEL := 202504
-PRODUCT_SHIPPING_API_LEVEL := 36
+PRODUCT_SHIPPING_API_LEVEL := 37
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
@@ -403,7 +403,7 @@ PRODUCT_PACKAGES += \
     libwfdaac_vendor
 
 # Override vendor_ramdisk bionic with ROM prebuilts
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/vendor_ramdisk/system/bin/linker64:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/system/bin/linker64 \
     $(LOCAL_PATH)/vendor_ramdisk/system/bin/e2fsck:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/system/bin/e2fsck \
     $(LOCAL_PATH)/vendor_ramdisk/system/bin/fsck.f2fs:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/system/bin/fsck.f2fs \

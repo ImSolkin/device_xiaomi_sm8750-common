@@ -43,14 +43,7 @@ lib_fixups: lib_fixups_user_type = {
 
 blob_fixups: blob_fixups_user_type = {
     # Fix keymint prebuilt dependency to use AOSP-built version
-    (
-        'vendor/lib64/libqtikeymint.so',
-        'vendor/bin/hw/android.hardware.security.keymint-service-qti',
-    ): blob_fixup()
-        .replace_needed(
-            'android.hardware.security.keymint-V3-ndk_prebuilt.so',
-            'android.hardware.security.keymint-V3-ndk.so'
-        ),
+    # KeyMint fixup disabled
     (
         'vendor/lib64/libwfdmmsrc_proprietary.so',
     ): blob_fixup()
