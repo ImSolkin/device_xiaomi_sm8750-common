@@ -26,7 +26,7 @@ $(call inherit-product, packages/modules/Virtualization/apex/product_packages.mk
 $(call inherit-product, hardware/qcom-caf/common/common.mk)
 
 # SHIPPING API
-BOARD_SHIPPING_API_LEVEL := 202504
+BOARD_SHIPPING_API_LEVEL := 202604
 PRODUCT_SHIPPING_API_LEVEL := 37
 
 # AAPT
@@ -127,13 +127,13 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint-service.xiaomi_prebuilt \
+    # android.hardware.biometrics.fingerprint-service.xiaomi \
     android.hardware.biometrics.fingerprint-V4-ndk.vendor \
     android.hardware.biometrics.common-V4-ndk.vendor \
     android.hardware.biometrics.common.config.vendor \
     android.hardware.biometrics.common.thread.vendor \
     android.hardware.biometrics.common.util.vendor \
-    libudfpshandler_prebuilt
+    # libudfpshandler
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
@@ -323,8 +323,8 @@ PRODUCT_PACKAGES += \
     qti_telephony_utils_prd.xml \
     telephony-ext \
     xiaomi-telephony-stub \
-    imssettings \
-    ImsDataChannelService
+    # imssettings \
+    # ImsDataChannelService
 
 PRODUCT_BOOT_JARS += \
     telephony-ext \
